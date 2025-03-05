@@ -5,6 +5,10 @@ const app = express();
 
 app.use(express.json())
 
+app.get("/", (req, res) => {
+    res.send("Use /products in the URL to get all products")
+})
+
 app.get('/products', (req, res) => {
     res.send(products)
 });
